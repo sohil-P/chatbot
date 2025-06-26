@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="chatbot.css" />
+  </head>
+  <body>
+    <button id="chatbot-toggler">
+      <span class="fa-solid fa-comment-dots"></span>
+      <span class="fa-solid fa-xmark"></span>
+    </button>
+
+    <div class="chatbot-popup">
+      <!-- chatbot-header ------->
+      <div class="chat-header">
+        <div class="header-info">
+          <div class="header-logo-box">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h2 class="logo-text">Chatbot</h2>
+        </div>
+        <button class="fa-solid fa-angle-down" id="close-chatbot"></button>
+      </div>
+
+      <!-- chatbot body ----------->
+      <div class="chat-body">
+        <div class="message bot-message">
+          <i class="fa-solid fa-robot bot-avatar"></i>
+          <div class="message-text">
+            Hey there 👋 <br />
+            How can I help you today?
+          </div>
+        </div>
+      </div>
+
+      <!-- chatbot footer --------->
+      <div class="chat-footer">
+        <form action="#" class="chat-form">
+          <textarea
+            placeholder="Message..."
+            class="message-input"
+            required
+          ></textarea>
+          <div class="chat-controls">
+            <button class="fa-regular fa-face-smile" id="emoji-picker"></button>
+            <div class="file-upload-wrapper">
+              <input type="file" accept="images/*" id="file-input" hidden />
+              <img src="#" />
+              <button class="fa-solid fa-paperclip" id="file-upload"></button>
+              <button class="fa-solid fa-xmark" id="file-cancel"></button>
+            </div>
+            <button class="fa-solid fa-arrow-up" id="send-message"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Emoji script link -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
